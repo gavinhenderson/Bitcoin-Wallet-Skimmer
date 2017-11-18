@@ -8,41 +8,41 @@ import time as t
 
 def sendParseText(scrapeNo):
 	# Your Account SID from twilio.com/console
-	account_sid = "AC216d8bb08152b6f544b391268d155e30"
+	account_sid = ""
 	# Your Auth Token from twilio.com/console
-	auth_token  = "98aad9f144f807da09bf6f59b04435a6"
+	auth_token  = ""
 
 	client = Client(account_sid, auth_token)
 
 	message = client.messages.create(
-	    to="+447414525394", 
-	    from_="+441228830063",
+	    to="", 
+	    from_="",
 	    body="Parsed "+ str(scrapeNo)+" amount of wallets")
 
 def sendWalletID(page, wallet, pKey):
 	# Your Account SID from twilio.com/console
-	account_sid = "AC216d8bb08152b6f544b391268d155e30"
+	account_sid = ""
 	# Your Auth Token from twilio.com/console
-	auth_token  = "98aad9f144f807da09bf6f59b04435a6"
+	auth_token  = ""
 
 	client = Client(account_sid, auth_token)
 
 	message = client.messages.create(
-	    to="+447414525394", 
-	    from_="+441228830063",
+	    to="+", 
+	    from_="+",
 	    body="Something interesting happened on page: "+str(page)+ "\n at wallet: "+ str(wallet) + "\n with private key: " + str(pKey))
 
 def sendError():
 	# Your Account SID from twilio.com/console
-	account_sid = "AC216d8bb08152b6f544b391268d155e30"
+	account_sid = ""
 	# Your Auth Token from twilio.com/console
-	auth_token  = "98aad9f144f807da09bf6f59b04435a6"
+	auth_token  = ""
 
 	client = Client(account_sid, auth_token)
 
 	message = client.messages.create(
-	    to="+447414525394", 
-	    from_="+441228830063",
+	    to="+", 
+	    from_="",
 	    body="Error was thrown, waiting for a few mins")
 
 pageNo = 1
